@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    
 
     respond_to do |format|
       format.html # show.html.erb
@@ -91,6 +92,6 @@ class PostsController < ApplicationController
     authenticate_or_request_with_http_basic do |name, password|
       name == "admin" && password == "emmitt"
     end
-end
+  end
 end
 
