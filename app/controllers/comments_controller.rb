@@ -5,3 +5,4 @@ class CommentsController < ApplicationController
     redirect_to @post
   end
 end
+
