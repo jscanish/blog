@@ -15,13 +15,6 @@ class CommentsController < ApplicationController
   end
 end
 
-private
-
-def authenticate
-  authenticate_or_request_with_http_basic do |name, password|
-      name == "josh" && password == "emmitt"
-    end
-end
 
 def admin_user
   authenticate
