@@ -1,8 +1,10 @@
 <div class="posts_list">
+
 <%= div_for post do%>
   <h2><%= link_to_unless_current h(post.title), post %></h2>
   <%=h simple_format word_wrap(post.body, :line_width => 130) %>
   <h5>Posted <%= time_ago_in_words(post.created_at) %> ago</h5>
 <% end %>
+
 </div>
 
