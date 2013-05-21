@@ -2,7 +2,13 @@
   <div id="joshs_blog_text"><h1>Josh's Thoughts</h1></div>
 </div>
 
+
 <%= render :partial => @posts %>
+
+
 
 <div class="posts_list"><%= link_to 'New Post', new_post_path %></div>
 
+<%#=h truncate(post.body, :length => 40) %>
+
+<%#= render :partial => @posts %>

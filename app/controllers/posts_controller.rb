@@ -6,11 +6,20 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
       format.atom
+    end
+  end
+
+  def feed
+    @posts = Post.all(:select => "title, author, id, content, posted_at", :order => "posted_at DESC", :limit => 20) 
+
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false } #index.rss.builder
     end
   end
 
@@ -85,8 +94,6 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  private
 
   
 end
