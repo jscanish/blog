@@ -2,7 +2,8 @@
 <%= div_for post do%>
   <h2><%= link_to_unless_current h(post.title), post %></h2>
   <%= simple_format h(post.body) %>
-<% end %>
+  <h5>Posted <%= time_ago_in_words(post.created_at) %> ago</h5>
+  <% end %>
 </div>
 
 
