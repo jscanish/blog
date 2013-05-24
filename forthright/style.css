@@ -51,8 +51,6 @@ a {
 }
 
 a:hover {
-	color: black;
-	background-color: transparent;
 }
 
 /* Header */
@@ -64,18 +62,6 @@ a:hover {
 	clear: both;
 	width: 1000px;
 	margin: 0px auto;
-	text-align: right;
-}
-
-#title {
-	text-align: center;
-	font-size: 1.8em;
-	color: #003300;
-	padding-bottom: 25px;
-}
-
-.titles {
-	color: #4C5C37;
 }
 
 /* Logo */
@@ -272,18 +258,9 @@ a:hover {
 	display: inline-block;
 	height: 30px;
 	padding: 30px 0px 0px 0px;
-	font-size: 20px;
+	font-size: 14px;
 	font-weight: normal;
 	color: #1C1C1C;
-}
-
-.static {
-	color: #000000;
-	text-transform: none;
-	font-family: "Times New Roman";
-	font-weight: normal;
-	font-size: 1.4em;
-	letter-spacing: normal;
 }
 
 .button
