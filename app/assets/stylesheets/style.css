@@ -72,7 +72,13 @@ a:hover {
 	text-align: center;
 	font-size: 1.8em;
 	color: #003300;
-	padding-bottom: 25px;
+}
+
+#subtitle {
+	text-align: center;
+	font-size: 2em;
+	color: #003300;
+	padding-bottom: 28px;
 }
 
 .titles {
