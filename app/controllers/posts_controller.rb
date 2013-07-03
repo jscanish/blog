@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   before_filter :authenticate, :except => [:index, :show]
-  
+
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.reverse!
-    
+    @posts = Post.all
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def feed
-    @posts = Post.all(:select => "title, author, id, content, posted_at", :order => "posted_at DESC", :limit => 20) 
+    @posts = Post.all(:select => "title, author, id, content, posted_at", :order => "posted_at DESC", :limit => 20)
 
     respond_to do |format|
       format.html
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-    
+
 
     respond_to do |format|
       format.html # show.html.erb
@@ -95,6 +95,6 @@ class PostsController < ApplicationController
     end
   end
 
-  
+
 end
 
