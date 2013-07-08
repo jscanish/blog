@@ -1,14 +1,16 @@
 Blog::Application.routes.draw do
-  
-  resources :posts do 
+
+  resources :posts do
     resources :comments, :only => [:create, :destroy]
   end
-  
+
   root :to => 'posts#index'
 
 match '/home' => 'pages#home'
 match '/about' => 'pages#about'
 match '/contact' => 'pages#contact'
+
+
 
 
   # The priority is based upon order of creation:
