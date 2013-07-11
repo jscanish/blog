@@ -6,7 +6,11 @@
 <%= render :partial => @posts %>
 
 
+
+<%= will_paginate @posts %><br/>
 <%= link_to 'New Post', new_post_path %>
+
+
 
 <%#=h truncate(post.body, :length => 40) %>
 
