@@ -7,7 +7,12 @@
 
 
 <%= will_paginate @posts %><br/>
+<% if logged_in? %>
 <%= link_to 'New Post', new_post_path %>
+<div style="text-align: right"><%= link_to 'logout', logout_path %></div>
+<% else %>
+<div style="text-align: right"><%= link_to 'Login', login_path %></div>
+<% end %>
 
 
 

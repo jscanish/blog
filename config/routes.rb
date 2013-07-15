@@ -4,11 +4,18 @@ Blog::Application.routes.draw do
     resources :comments, :only => [:create, :destroy]
   end
 
+
   root :to => 'posts#index'
 
 match '/home' => 'pages#home'
 match '/about' => 'pages#about'
 match '/contact' => 'pages#contact'
+controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    get 'logout' => :destroy
+end
+
 
 
 

@@ -1,9 +1,11 @@
 <%= div_for comment do %>
   <p>
   	<strong><%= comment.name %></strong> says:<br />
-  	<%= h(comment.body) %> &nbsp |             
-  	<%= link_to 'Delete', [@post, comment], :method => :delete, :confirm => 'Are you sure?' %><br />
-  	<strong>Posted <%= time_ago_in_words(comment.created_at) %> ago</strong>
+  	<%= h(comment.body) %>
+  	<% if logged_in? %>
+      <%= link_to 'Delete', [@post, comment], :method => :delete, :confirm => 'Are you sure?' %><br />
+    <% end %>
+  	<br/><strong>Posted <%= time_ago_in_words(comment.created_at) %> ago<br/></strong>
   </p>
 
 <% end %>
