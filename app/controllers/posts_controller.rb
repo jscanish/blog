@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :require_user, only: [:new, :create, :update, :edit]
+  before_filter :require_user, only: [:new, :create, :update, :edit, :destroy]
 
 
   # GET /posts
